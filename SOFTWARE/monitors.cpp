@@ -636,7 +636,7 @@ void ring_monitor(void) {
       last_num_pixels = 4;
     } else if (raw < 0x7FF) {
       last_num_pixels = 24;
-    } else if (raw < 0xBFE) {
+    } else if (raw < 0xBFF) {
       last_num_pixels = 32;
     } else {
       last_num_pixels = 40;
@@ -660,11 +660,11 @@ void ring_monitor(void) {
   case 32:
     if (raw < 0x7FF - HYSTERESIS)
       current_num_pixels = 24;
-    else if (raw > 0xBFE + HYSTERESIS)
+    else if (raw > 0xBFF + HYSTERESIS)
       current_num_pixels = 40;
     break;
   case 40:
-    if (raw < 0xBFE - HYSTERESIS)
+    if (raw < 0xBFF - HYSTERESIS)
       current_num_pixels = 32;
     break;
   default:
