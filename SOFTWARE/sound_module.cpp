@@ -68,8 +68,7 @@ bool sound_is_playing(void) {
  */
 void sound_wait_til_end(bool fire, bool shutdown) {
     int i = 0;
-    while ((gpio_get(pack_sound_busy_pin) == (pack_sound_busy_level ^ 1)) &&
-           (i < 20)) {
+    while (!sound_is_playing() && (i < 20)) {
         i++;
         sleep_ms(10);
     }
