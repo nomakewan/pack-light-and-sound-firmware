@@ -218,4 +218,4 @@ You will receive five sets of wires with the board. Use the short wires with whi
 
 Use the longer cable to connect the IN port on the A board to the IN port on the Vent board.
 
-When using this board with four LEDs, you must also adjust the potentiometer on the main controller board labeled ADJ1. Rotate this potentiometer counterclockwise until a four-LED rainbow pattern appears and rotates. This confirms the correct setting.
+When using this board with four LEDs, you must also adjust the potentiometer on the main controller board labeled ADJ1. Rotate this potentiometer counterclockwise until the ring confirms the four-LED setting with a **solid red** flash. Any other confirmation color means the knob is not far enough over — keep turning. On firmware prior to v1.2.0 the confirmation was a scrolling rainbow at every setting, so it could not be used to verify the count; update the firmware, or confirm instead by checking that the chase uses all four lights.
